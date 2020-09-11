@@ -51,3 +51,24 @@ class KasuPrinter() extends GenkaiPrinter{
     println("Kasu")
   }
 }
+
+
+/*
+new GenkaiPrinter().printのprintに()を付けないと、
+scala> new GenkaiPrinter().print
+                           ^
+       warning: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method print,
+       or remove the empty argument list from its definition (Java-defined methods are exempt).
+       In Scala 3, an unapplied method like this will be eta-expanded into a function.
+Genkai
+と表示される。
+どうやら、javaのprintと間違えられるかららしい。
+
+//以下実行結果
+scala> new GenkaiPrinter().print()
+Genkai
+
+
+scala> new KasuPrinter().print()
+Kasu
+ */
