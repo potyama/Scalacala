@@ -1,4 +1,6 @@
+
 object Main extends App{
+
   //if
   var age: Int = 5
   var isSchoolStarted: Boolean = false
@@ -28,14 +30,14 @@ object Main extends App{
   //triangle()
 
   //match
-  var result = "ryunen"
+  val result = "ryunen"
 
   result match {
     case "ryunen" => println("kasu")
     case "sinkyu" => println("pro")
   }
-
-  var list = List("x", "y", "z")
+//パターンマッチ
+  val list = List("x", "y", "z")
 
   list match {
     case List("x", b, c) =>
@@ -44,6 +46,28 @@ object Main extends App{
     case _ =>
       println("nothing")
   }
+  //パターンマッチ2
+  list match {
+    case List("x", b, c) if b != "y" =>
+      println("y = " + b)
+      println("z = " + c)
+    case _ =>
+      println("nothing")
+  }
+//2要素からなるlistのパターンマッチ
+  val listList = List(List("x, a"), List("y", "z"))
 
+  listList match {
+    case List(a@List("x, a"), x) =>
+      println(a)
+      println(x)
+    case _ => println("nothing")
+  }
 
+  for(i <- 1 to 10) {
+    val s = new scala.util.Random(new java.security.SecureRandom()).alphanumeric.take(5).toList match {
+      case List(a, b, _, d, _) => List(a, b, a, d, a)
+    }
+    println(s)
+  }
 }
