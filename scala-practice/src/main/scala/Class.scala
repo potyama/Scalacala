@@ -13,11 +13,6 @@ val p1: Point = (1, 1)
 scala> val p1 = new Point(3,1)
 val p1: Point = (3, 1)
 
-scala> val multi = new Multi()
-val multi: Multi = Multi@5698108e
-
-scala> multi.mul(2)(10000)
-val res0: Int = 20000
  */
 
  class Multi {
@@ -25,6 +20,12 @@ val res0: Int = 20000
 }
 
 /*
+scala> val multi = new Multi()
+val multi: Multi = Multi@5698108e
+
+scala> multi.mul(2)(10000)
+val res0: Int = 20000
+
 scala> val ok = multi.mul(3) _
 val ok: Int => Int = $Lambda$6126/68367327@12d248b6
 
