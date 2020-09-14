@@ -1,5 +1,5 @@
 object Point {
-  def apply(x: Int, y: Int): Point = new Point(x, y)
+  def apply(x: Int, y: Int): Point2 = new Point2(x, y)
 }
 //private[this]だとフィールドにアクセスできない。
 class classmate(name: String, age: Int, private val num: Int)

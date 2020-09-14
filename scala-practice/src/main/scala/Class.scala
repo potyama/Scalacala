@@ -1,8 +1,8 @@
 class grid(val x: Int, val y: Int)
 
-class Point(val x: Int, val y: Int) {
-  def -(p: grid): Point = {
-    new Point(x - p.x, y - p.y)
+class Point2(val x: Int, val y: Int) {
+  def -(p: grid): Point2 = {
+    new Point2(x - p.x, y - p.y)
   }
   override def toString(): String = "(" + x + ", " + y + ")"
 }
