@@ -43,3 +43,8 @@ object Stack {
   def apply(): Stack[Nothing] = EmptyStack
 }
 
+/*
+contravariant(反変)
+型パラメータを持ったクラスG、型パラメーターA,Bがあったとき、AがBを継承しているときにのみ、
+val : G[A] = G[B]
+ */
